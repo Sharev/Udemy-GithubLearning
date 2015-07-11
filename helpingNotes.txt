@@ -1,0 +1,32 @@
+GIthub/Git
+1) use git shell instead of cmd(easy)
+2) make a folder - udemy_mylocalrepo
+3) open git shell, go to that folder, git init
+4) a new hidden folder will be made inside your udemy_mylocalrepo
+5) Make a repository on github, 
+  simply click + icon on top,give it a name , desc, public, etc. 
+
+6) Adding remote repository to local (udemy_GithubLearning to udemy_localrepo)
+  two types : http and ssh
+  i) for now we use htttp
+  ii) click on http in your github repository copy git remote add origin https://github.com/Sharev/Udemy-GithubLearning.git in git shell
+
+  origin is name you give to repository
+7) to check if remote repository is already added 
+git remote -v
+   
+8) to delete a remote repository
+git remote remove origin
+*change origin with name you gave to the repository
+
+9) adding a file to local repository
+i) to see untracked files
+   git status
+
+ii) to stage (make a file ready to commit) untracked file (or to put it in index)
+    git add filename.txt   
+or
+    git add .
+or 
+    git ad --all	
+  
