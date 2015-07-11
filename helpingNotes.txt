@@ -8,7 +8,7 @@ GIthub/Git
 
 6) Adding remote repository to local (udemy_GithubLearning to udemy_localrepo)
   two types : http and ssh
-  i) for now we use htttp
+  i) for now we use http
   ii) click on http in your github repository copy git remote add origin https://github.com/Sharev/Udemy-GithubLearning.git in git shell
 
   origin is name you give to repository
@@ -75,3 +75,18 @@ click add
 title: give your comp name
 key: paste
 password  
+
+iv)to add file using ssh
+  git remote add origin sshkeyurlcopiedfromgithub
+check
+  git remote -v
+  git status
+stage it
+  git add .
+check
+  git status
+commit
+  git commit -m "msg here"
+push
+  git push origin master
+  
