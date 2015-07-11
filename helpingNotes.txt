@@ -29,4 +29,49 @@ or
     git add .
 or 
     git ad --all	
+	
+iii) to unstage a file (i.e. put it out of index)
+     git rm --cached filename.txt 	
+	 
+10) .gitignore file
+i) any file inside this will not be allowed to stage or commit by git.
+ii) name a file as .gitignore and choose file type as all files
+iii) to ignore a file say filename.txt
+	 open .gitignore
+	 write filename.txt in .gitignore, save
+	 now add .gitignore as it is modified using git add .gitignore
   
+11) only an author can commit, so git software should know username and emailid
+git config --global user.name "Sharev(github username)"
+git config --global user.email "sharev3162#gmail.com(github email)"
+
+12)to commit files locally
+git commit -m "msg name"
+
+13)git log command
+shows list of commits that shows changes with messages
+
+14) pussh file from local repository to remote server (ur comp to github)
+check your remote repo name when u added it to local repo
+  git remote -v
+push
+  git push origin(this is repo name) master
+github will ask for username : Sharev
+github will ask for password :   
+
+15)SSH
+i) u dont need to type username and password when you push
+ii) generate SSH key
+open gitbash
+  ssh -keygen -t rsa -C "emailid"
+change directory to where key is
+  cd .ssh
+copy the key
+  clip <id_ras.pub  
+iii) add ssh key to github
+open github go to settings
+go to ssh keys
+click add
+title: give your comp name
+key: paste
+password  
