@@ -1,0 +1,92 @@
+GIthub/Git
+1) use git shell instead of cmd(easy)
+2) make a folder - udemy_mylocalrepo
+3) open git shell, go to that folder, git init
+4) a new hidden folder will be made inside your udemy_mylocalrepo
+5) Make a repository on github, 
+  simply click + icon on top,give it a name , desc, public, etc. 
+
+6) Adding remote repository to local (udemy_GithubLearning to udemy_localrepo)
+  two types : http and ssh
+  i) for now we use http
+  ii) click on http in your github repository copy git remote add origin https://github.com/Sharev/Udemy-GithubLearning.git in git shell
+
+  origin is name you give to repository
+7) to check if remote repository is already added 
+git remote -v
+   
+8) to delete a remote repository
+git remote remove origin
+*change origin with name you gave to the repository
+
+9) adding a file to local repository
+i) to see untracked files
+   git status
+
+ii) to stage (make a file ready to commit) untracked file (or to put it in index)
+    git add filename.txt   
+or
+    git add .
+or 
+    git ad --all	
+	
+iii) to unstage a file (i.e. put it out of index)
+     git rm --cached filename.txt 	
+	 
+10) .gitignore file
+i) any file inside this will not be allowed to stage or commit by git.
+ii) name a file as .gitignore and choose file type as all files
+iii) to ignore a file say filename.txt
+	 open .gitignore
+	 write filename.txt in .gitignore, save
+	 now add .gitignore as it is modified using git add .gitignore
+  
+11) only an author can commit, so git software should know username and emailid
+git config --global user.name "Sharev(github username)"
+git config --global user.email "sharev3162#gmail.com(github email)"
+
+12)to commit files locally
+git commit -m "msg name"
+
+13)git log command
+shows list of commits that shows changes with messages
+
+14) pussh file from local repository to remote server (ur comp to github)
+check your remote repo name when u added it to local repo
+  git remote -v
+push
+  git push origin(this is repo name) master
+github will ask for username : Sharev
+github will ask for password :   
+
+15)SSH
+i) u dont need to type username and password when you push
+ii) generate SSH key
+open gitbash
+  ssh -keygen -t rsa -C "emailid"
+change directory to where key is
+  cd .ssh
+copy the key
+  clip <id_ras.pub  
+iii) add ssh key to github
+open github go to settings
+go to ssh keys
+click add
+title: give your comp name
+key: paste
+password  
+
+iv)to add file using ssh
+  git remote add origin sshkeyurlcopiedfromgithub
+check
+  git remote -v
+  git status
+stage it
+  git add .
+check
+  git status
+commit
+  git commit -m "msg here"
+push
+  git push origin master
+  
